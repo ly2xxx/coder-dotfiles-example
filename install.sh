@@ -79,6 +79,24 @@ else
 fi
 
 echo ""
+
+# Clone personal repository
+echo "📦 Cloning personal repository..."
+REPO_DIR="$HOME/ly2xxx"
+
+if [ -d "$REPO_DIR" ]; then
+    echo "⚠️  Repository already exists at $REPO_DIR"
+    echo "   Pulling latest changes..."
+    cd "$REPO_DIR"
+    git pull
+else
+    echo "🔽 Cloning https://github.com/ly2xxx/ly2xxx to $REPO_DIR"
+    git clone https://github.com/ly2xxx/ly2xxx.git "$REPO_DIR"
+fi
+
+echo "✅ Personal repository ready at $REPO_DIR"
+echo ""
+
 echo "======================================"
 echo "✨ Dotfiles setup complete! ✨"
 echo "======================================"
