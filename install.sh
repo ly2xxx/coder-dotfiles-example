@@ -59,7 +59,7 @@ fi
 
 # Install Gemini CLI
 echo "📦 Installing google-generativeai package..."
-pip3 install --user --upgrade google-generativeai
+pip3 install --user --upgrade --break-system-packages google-generativeai
 
 # Add Python user bin to PATH if not already there
 if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
