@@ -95,14 +95,21 @@ echo "📦 System dependencies will be installed by Playwright..."
 echo "🌐 Installing Chromium browser..."
 python3 -m playwright install chromium --with-deps
 
+# Install xvfb for virtual display (needed for non-headless mode)
+echo "📺 Installing virtual display (xvfb)..."
+if command -v apt-get &> /dev/null; then
+    sudo apt-get install -y xvfb
+fi
+
 echo ""
-echo "✅ Playwright + Chromium installed!"
+echo "✅ Playwright + Chromium + xvfb installed!"
 echo ""
 
 # Test Playwright installation
 echo "🧪 Testing Playwright installation..."
 if python3 -c "from playwright.sync_api import sync_playwright; print('✅ Playwright import successful!')" 2>/dev/null; then
     echo "✅ Playwright is ready to use!"
+    echo "💡 Tip: Run non-headless scripts with: xvfb-run python3 your_script.py"
 else
     echo "⚠️  Playwright installed but import test failed (may need to restart shell)"
 fi
