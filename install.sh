@@ -87,27 +87,9 @@ echo "🎭 Installing Playwright with Chromium..."
 echo "📦 Installing Playwright package..."
 pip3 install --user --upgrade --break-system-packages playwright
 
-# Install system dependencies (Ubuntu/Debian)
-if command -v apt-get &> /dev/null; then
-    echo "📦 Installing Playwright system dependencies..."
-    sudo apt-get update
-    sudo apt-get install -y \
-        libnss3 \
-        libatk1.0-0 \
-        libatk-bridge2.0-0 \
-        libcups2 \
-        libdrm2 \
-        libxkbcommon0 \
-        libxcomposite1 \
-        libxdamage1 \
-        libxrandr2 \
-        libgbm1 \
-        libasound2 \
-        libpango-1.0-0 \
-        libcairo2 \
-        fonts-liberation \
-        xdg-utils
-fi
+# Install system dependencies - let Playwright handle it
+# The --with-deps flag will install all required system packages
+echo "📦 System dependencies will be installed by Playwright..."
 
 # Install Chromium browser
 echo "🌐 Installing Chromium browser..."
