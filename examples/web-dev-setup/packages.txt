@@ -1,0 +1,7 @@
+# Web development system packages
+# Place this in ~/.dotfiles-extra/packages.txt
+
+postgresql-client
+redis-tools
+nginx
+jq

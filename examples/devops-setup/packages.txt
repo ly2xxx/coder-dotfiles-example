@@ -1,0 +1,11 @@
+# DevOps system packages
+# Place this in ~/.dotfiles-extra/packages.txt
+
+curl
+wget
+git
+vim
+tmux
+htop
+jq
+docker.io

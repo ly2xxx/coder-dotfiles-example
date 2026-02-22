@@ -1,0 +1,19 @@
+# DevOps/SRE Stack
+# Place this in ~/.dotfiles-extra/requirements.txt
+
+# Infrastructure as Code
+ansible>=8.0.0
+
+# Cloud CLIs
+awscli>=1.29.0
+google-cloud-cli
+
+# Kubernetes
+kubernetes>=27.0.0
+
+# Monitoring
+prometheus-client>=0.17.0
+
+# Utilities
+pyyaml>=6.0
+jinja2>=3.1.0

@@ -1,0 +1,10 @@
+# Frontend tools
+# Place this in ~/.dotfiles-extra/npm-packages.txt
+
+typescript
+@types/node
+eslint
+prettier
+react
+next
+vite

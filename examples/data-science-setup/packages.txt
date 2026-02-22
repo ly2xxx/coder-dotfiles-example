@@ -1,0 +1,6 @@
+# System packages for data science
+# Place this in ~/.dotfiles-extra/packages.txt
+
+build-essential
+python3-dev
+graphviz
